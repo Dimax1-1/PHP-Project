@@ -1,0 +1,11 @@
+allora manca solo fare delle piccolezze:
+- I clienti ripetuti sono quelli che pagano ma se viene annullato il pagamento precdente (non quello duplicato)
+  va eliminato il duplicato
+- la scadenza del duplicato viene presa in base a quando ho pagato l'assicurazione se la scadenza è nel futuro aumentare scadenza in base ad annuale o semestrale
+- aggiungere dei quadrati che indicano le vari colori che si possono visualizzare
+- migliorare il css per qualsiasi display
+- voglio anche poter vedere per mese, anno i clienti in diverse tabelle quindi rivedere la riorganizzazione "seleziona il mese da visualizzare"
+- fare un foglio che raccoglie cliente per cliente per ogni azienda che raggruppa che hanno pagato clienti per agenzie e mesi 
+- aggiungere fattura (tra premio e frazionamento)
+- indicizzato avviene solo frazionamento annuale (mettere un simbolino)
+- aggiungere anche di poter scaricare tabella mensilmente in pdf
