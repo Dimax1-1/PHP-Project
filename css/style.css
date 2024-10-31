@@ -1,0 +1,321 @@
+/* Animazioni 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.centro-container {
+    position: fixed; /* Per posizionarlo rispetto alla viewport */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra perfettamente */
+    display: flex;
+    flex-direction: column; /* Allinea gli elementi in colonna */
+    align-items: center; /* Centra orizzontalmente */
+}
+
+
+.login-container,
+.register-container {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #009879;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    size: 100%;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #009879;
+    outline: none;
+    box-shadow: 0 0 8px rgba(92, 184, 92, 0.1);
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #009879;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #036c57;
+    transform: scale(1.05);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-link a {
+    color: #009879;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-link a {
+    color: #009879;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+/* Popup */
+.popup {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 11;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.popup p {
+    font-size: 16px;
+    color: #666;
+}
+
+.popup button {
+    padding: 10px 30px;
+    margin-top: 20px;
+    background-color: #009879;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.popup button:hover {
+    background-color: #036c57;
+    transform: scale(1.05);
+}
+
+.open-popup {
+    display: block;
+}
+
+.open-overlay {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.inserimento-clienti-container {
+    position: relative;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 450px;
+    width: 100%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-visualizza-storico {
+    margin-top: 35px;
+    position: left;
+    width: 25%;
+}
+/*tabella storico*/
+.tabella-clienti {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 16px;
+    text-align: left;
+    border: #dddddd;
+    table-layout: fixed;
+    /* Rende la larghezza delle colonne uniforme */
+}
+
+.tabella-clienti th,
+.tabella-clienti td {
+    padding: 12px 15px;
+    word-wrap: break-word;
+    /* Rompe le parole troppo lunghe */
+    white-space: normal;
+    /* Permette il wrapping su più linee */
+}
+
+.tabella-clienti td {
+    max-width: 150px;
+    /* Imposta una larghezza massima per le celle */
+    overflow: hidden;
+    /* Nasconde l'overflow */
+    text-overflow: ellipsis;
+    /* Mostra "..." se il testo è troppo lungo */
+}
+
+.tabella-clienti thead tr {
+    background-color: #5cb85c;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.tabella-clienti tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.tabella-clienti tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.tabella-clienti tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tabella-clienti tbody tr:last-of-type {
+    border-bottom: 2px solid #5cb85c;
+}
+
+/* Stile generale per tutti i pulsanti */
+.tabella-clienti button,
+.tabella-clienti a {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    /* Bordi arrotondati */
+    transition: background-color 0.3s ease;
+}
+
+/* Stile per link di eliminazione */
+.tabella-clienti a {
+    background-color: #d9534f;
+}
+
+.tabella-clienti button:hover,
+.tabella-clienti a:hover {
+    background-color: #4cae4c;
+}
+
+.tabella-clienti a:hover {
+    background-color: #c9302c;
+}
+
+.tabella-clienti .pagato-btn {
+    background-color: #5bc0de;
+}
+
+.tabella-clienti .annulla-btn {
+    background-color: #f0ad4e;
+}
+
+.tabella-clienti .avvisa-btn {
+    background-color: #0275d8;
+}
+
+.tabella-clienti .modifica-btn {
+    background-color: #337ab7;
+}
+
+tr .pagato {
+    background-color: #00e1b4;
+}
+
+/*Gestione scadenza polizza*/
+
+/* Colore per le scadenze entro 14 giorni */
+tr .in-scadenza {
+    background-color: yellow;
+    color: black;
+}
+
+/* Colore per le scadenze passate */
+tr .scaduta {
+    background-color: red;
+    color: white;
+}
